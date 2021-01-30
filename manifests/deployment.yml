@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: aks2image 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: aks2image
+  template:
+    metadata:
+      labels:
+        app: aks2image 
+    spec:
+      containers:
+        - name: aks2image 
+          image: tundenewcontainerreg.azurecr.io/aks2image
+          ports:
+          - containerPort: 80
