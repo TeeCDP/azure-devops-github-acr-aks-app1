@@ -14,7 +14,7 @@ variables:
   imageRepository: 'aks2image'
   containerRegistry: 'tundenewcontainerreg.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
-  tag: '$(Build.BuildId)'
+  tag: '$(Build.SourceVersion)'
   
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
